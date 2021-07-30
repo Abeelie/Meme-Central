@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container">
+  <div class="columns">
+    <div class="column" id="m">
+      <nav class="breadcrumb" aria-label="breadcrumbs">
+        <br>
+        <br>
+          <ul id="list">
+            <li><a class="amc">AMC</a></li>
+            <li><a class="bb">BB</a></li>
+            <li><a class="clf">CLF</a></li>
+            <li><a class="clov">Clov</a></li>
+            <li><a class="gme">GME</a></li>
+            <li><a class="sndl">SNDL</a></li>
+            <li><a class="tlry">TLRY</a></li>
+            <li><a class="tsla">TSLA</a></li>
+          </ul>
+      </nav>
+
+      <div class="data">
+        <div class="hero is-fullheight">
+        <div class="box" id="intro-text">
+          <center>
+            <p class="title is-2">Welcome to Stock Dashboard</p>
+            <p class="title is-4">Here you will be able to view price information on the top
+              meme stocks
+            </p>
+            <p class="title is-4">Please click on one of the stock symbols on top to begin</p>
+          </center>        
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<script>
+    const NEWS_KEY = "{{ NEWS_API }}";
+    const STOCK_KEY = "{{ STOCK_API }}";
+</script>
+             
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+crossorigin="anonymous">
+</script>
+
+<script src="https://unpkg.com/axios/dist/axios.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="./static/js/stocks/insider.js"></script>
+<script src="./static/js/stocks/news.js"></script>
+<script src="./static/js/stocks/charts.js"></script>
+<script src="./static/js/stocks/stock.js"></script>
+{% endblock %}

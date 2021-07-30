@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+  <title>Meme Central</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+
+
+  
+</head>
+<body>
+  {% include 'navbar.html' %}
+
+<div id="data">
+  {% block content %}
+   <!-- put the content here -->
+  {% endblock %}
+</div>
+
+<!-- <footer class="footer has-text-white">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>Copyright &copy; 2021, All Right Reserved</p>
+      <p>
+        <a href="https://www.facebook.com/">
+          <i class="fab fa-facebook-square fa-2x"></i>
+        </a>
+        <a href="https://twitter.com/?lang=en">
+          <i class="fab fa-twitter-square fa-2x"></i>
+        </a>
+        <a href="https://www.instagram.com/">
+          <i class="fab fa-instagram fa-2x"></i>
+        </a>
+        <a href="https://www.snapchat.com/">
+          <i class="fab fa-snapchat fa-2x"></i>
+        </a>
+      </p>
+    </div>
+  </div>
+</footer>
+ -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+crossorigin="anonymous">
+</script>
+<script src="https://unpkg.com/axios/dist/axios.js"></script>
+<script src="/static/js/navbar.js"></script>
+
+</body>
+</html>

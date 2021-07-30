@@ -1,0 +1,75 @@
+.hero.has-background {
+  position: relative;
+  overflow: hidden;
+}
+.hero-background {
+  position: absolute;
+  object-fit: cover;
+  object-position: center center;
+  width: 100%;
+  height: 100%;
+}
+
+#intro {
+  padding-bottom: 100px;
+}
+
+#intro-title {
+  font-size: 45px;
+}
+
+footer.footer.has-text-white {
+  margin-top: 180px;
+}
+
+footer.footer.has-text-white {
+  background-color: black;
+}
+
+footer.footer.has-text-white {
+  margin-top: 0px; 
+}
+
+
+#list {
+  padding-left: 10px;
+}
+
+
+.card.is-horizontal {
+  display: flex;
+}
+.card.is-horizontal .card-image {
+  width: 15%;
+  height: 15%;
+}
+.card.is-horizontal .card-des {
+  flex-direction: column;
+  flex: 1 1 auto;
+  display: flex;
+  position: relative;
+}
+.card.is-horizontal .card-des .card-content {
+  flex-grow: 1;
+}
+
+#news-section {
+  padding-bottom: 50px;
+}
+
+@media only screen and (max-width: 750px) {
+.card.is-horizontal .card-image {
+  display: none;
+ }
+}
+
+
+
+
+
+
+
+
+
+
+
