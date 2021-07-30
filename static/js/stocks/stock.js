@@ -4,7 +4,7 @@ const stocks = stock;
 const colors = color;
 const site = website;
 const url = `https://cloud.iexapis.com/stable/stock/${stocks}/quote?token=${key}`;
-
+ 
 try {
   const response = await axios.get(url);
   const pr = response.data.iexRealtimePrice.toFixed(1);
