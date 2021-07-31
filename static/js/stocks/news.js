@@ -33,7 +33,7 @@ try {
   $("#news").append($news);
 });
 
-  const imgError = document.querySelector(".imgg");
+  const imgError = document.querySelectorAll(".imgg");
 
   if (response.data.articles.image) {
     imgError.src = response.data.articles.image;
