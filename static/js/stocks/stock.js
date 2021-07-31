@@ -194,6 +194,11 @@ try {
     priceChanges.style.color = "#ff0000";
   }
 
+  if (pr == null) {
+    priceChanges.innerHTML = "Market not Open"
+    priceChanges.style.color = "#ff0000";
+  }
+
   if (volume == 0) {
     v.innerHTML = "Market not Open";
     v.style.color = "#ff0000";
