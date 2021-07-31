@@ -11,8 +11,8 @@ try {
   <div class="card is-horizontal">
     <div class="card-image">
       <figure class="image is-square">
-        <img src=${article.image} style="object-fit:cover; width:300px;
-                                  height:100;" alt="../images/unavailable.jpg">
+        <img class="imgg" src=${article.image} style="object-fit:cover; width:300px;
+                                  height:100;" alt="image">
       </figure>
     </div>
 
@@ -35,9 +35,17 @@ try {
 
 
 } catch(error){
-  if (error) {
+  
+  if (error == 403) {
     alert("API Limit Reached")
   }
+
+  const imgError = document.querySelector(".imgg");
+
+  if (error == "ERR_HTTP2_PROTOCOL_ERROR") {
+    imgError.src = "./static/images/unavailable.jpg";
+  }
+
 	console.log(error)
 }
 
