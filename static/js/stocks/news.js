@@ -12,7 +12,7 @@ try {
     <div class="card-image">
       <figure class="image is-square">
         <img src=${article.image} style="object-fit:cover; width:300px;
-                                  height:100;" alt="image">
+                                  height:100;" alt="../images/unavailable.jpg">
       </figure>
     </div>
 
