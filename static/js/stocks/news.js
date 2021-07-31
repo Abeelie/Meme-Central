@@ -11,7 +11,7 @@ try {
   <div class="card is-horizontal">
     <div class="card-image">
       <figure class="image is-square">
-        <img src=${article.image} style="object-fit:cover; width:300px;
+        <img class="imgg" src=${article.image} style="object-fit:cover; width:300px;
                                   height:100;" alt="image">
       </figure>
     </div>
@@ -33,13 +33,22 @@ try {
   $("#news").append($news);
 });
 
+  const imgError = document.querySelector(".imgg");
+
+  if (response.data.articles.image) {
+    imgError.src = response.data.articles.image;
+  }else {
+    imgError.src = "https://vcunited.club/wp-content/uploads/2020/01/No-image-available-2.jpg"
+  }
+
+
 
 } catch(error){
   
   if (error.response.status == 403) {
     alert("API Limit Reached")
   }
-	console.log(error.response.status)
+	// console.log(error.response.status)
 }
 
 }
