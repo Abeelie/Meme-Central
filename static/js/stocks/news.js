@@ -35,8 +35,8 @@ try {
 
   const imgError = document.querySelector(".imgg");
 
-  if (article.image) {
-    imgError.src = article.image;
+  if (response.data.articles.image) {
+    imgError.src = response.data.articles.image;
   }else {
     imgError.src = "https://vcunited.club/wp-content/uploads/2020/01/No-image-available-2.jpg"
   }
