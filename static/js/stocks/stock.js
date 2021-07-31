@@ -7,7 +7,7 @@ const url = `https://cloud.iexapis.com/stable/stock/${stocks}/quote?token=${key}
  
 try {
   const response = await axios.get(url);
-  const pr = response.data.iexRealtimePrice.toFixed(1);
+  // const pr = response.data.iexRealtimePrice.toFixed(1);
   let volume = (response.data.volume).toLocaleString();
   let ytd = (response.data.ytdChange).toLocaleString();
 
@@ -30,7 +30,7 @@ try {
           <div class="tile is-ancestor has-text-centered">
             <div class="tile is-parent">
               <article class="tile is-child box">
-                <p class="title" id="price">$${pr}</p>
+                <p class="title" id="price">$${response.data.iexRealtimePrice}</p>
                 <p class="subtitle">Price</p>
               </article>
             </div>
@@ -194,10 +194,6 @@ try {
     priceChanges.style.color = "#ff0000";
   }
 
-  if (pr == null) {
-    priceChanges.innerHTML = "Market not Open"
-    priceChanges.style.color = "#ff0000";
-  }
 
   if (volume == 0) {
     v.innerHTML = "Market not Open";
