@@ -33,20 +33,22 @@ try {
   $("#news").append($news);
 });
 
+  const imgError = document.querySelector(".imgg");
+
+  if (article.image) {
+    imgError.src = article.image;
+  }else {
+    imgError.src = "https://vcunited.club/wp-content/uploads/2020/01/No-image-available-2.jpg"
+  }
+
+
 
 } catch(error){
   
-  if (error == 403) {
+  if (error.response.status == 403) {
     alert("API Limit Reached")
   }
-
-  const imgError = document.querySelector(".imgg");
-
-  if (error == "ERR_HTTP2_PROTOCOL_ERROR") {
-    imgError.src = "./static/images/unavailable.jpg";
-  }
-
-	console.log(error)
+	console.log(error.response.status)
 }
 
 }
