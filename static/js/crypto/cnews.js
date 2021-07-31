@@ -44,7 +44,8 @@ try {
 
 
 } catch(error){
-  if (error == 403) {
+  
+  if (error.response.status == 403) {
     alert("API Limit Reached")
   }
 	// console.log(error)
