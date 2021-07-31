@@ -12,7 +12,8 @@ try {
   <div class="card is-horizontal">
     <div class="card-image">
       <figure class="image is-square">
-        <img class="imgg" src=${article.image} style="object-fit:cover; width:300px;
+        <img src=${article.image} onerror="this.onerror=null;this.src='https://vcunited.club/wp-content/uploads/2020/01/No-image-available-2.jpg';" 
+                                  style="object-fit:cover; width:300px;
                                   height:100;" alt="image">
       </figure>
     </div>
@@ -33,15 +34,6 @@ try {
 
   $("#news").append($news);
 });
-
-  for (var i = 0; i < response.data.articles.length; i++) {
-  const imgError = document.querySelectorAll(".imgg");
-  if (response.data.articles.image) {
-    imgError.src = response.data.articles.image;
-   } else {
-    imgError.src = "https://vcunited.club/wp-content/uploads/2020/01/No-image-available-2.jpg"
-  }
- }
 
 } catch(error){
   
