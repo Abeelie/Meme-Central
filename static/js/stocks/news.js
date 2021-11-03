@@ -10,7 +10,7 @@ try {
   let $news = $(`
   <div class="card is-horizontal" style="margin-top:10px">
     <div class="card-image">
-      <figure class="news-image">
+      <figure class="image is-square">
         <img src=${article.image} 
           onerror="this.onerror=null;this.src='https://vcunited.club/wp-content/uploads/2020/01/No-image-available-2.jpg';" 
           alt="image">
